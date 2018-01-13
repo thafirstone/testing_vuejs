@@ -33,7 +33,8 @@
             </div>
           </div>
         </div> -->
-        <app-form></app-form>
+        <!-- <app-form></app-form> -->
+        <app-directives></app-directives>
     </div>
   </div>
 </template>
@@ -47,6 +48,7 @@
   import NewQuote from './components/wonderful/NewQuote';
   import Header from './components/wonderful/Header';
   import DefaultForm from './components/form/DefaultForm';
+  import Directives from './components/directives/BuiltInDirectives';
   import eventBus from './main';
 
   export default {
@@ -59,6 +61,7 @@
       appNewQuote: NewQuote,
       appHeader: Header,
       appForm: DefaultForm,
+      appDirectives: Directives,
     },
     data() {
       return {
