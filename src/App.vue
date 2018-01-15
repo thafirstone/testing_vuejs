@@ -35,7 +35,8 @@
         </div> -->
         <!-- <app-form></app-form> -->
         <!-- <app-directives></app-directives> -->
-        <app-transition></app-transition>
+        <!-- <app-transition></app-transition> -->
+        <app-http></app-http>
     </div>
   </div>
 </template>
@@ -51,6 +52,7 @@
   import DefaultForm from './components/form/DefaultForm';
   import Directives from './components/directives/BuiltInDirectives';
   import Transition from './components/transition/Transition';
+  import Http from './components/connect/Http';
   import eventBus from './main';
 
   export default {
@@ -65,6 +67,7 @@
       appForm: DefaultForm,
       appDirectives: Directives,
       appTransition: Transition,
+      appHttp: Http,
     },
     data() {
       return {

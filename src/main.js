@@ -1,12 +1,22 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
+import VueResource from 'vue-resource';
 import App from './App';
 import router from './router';
 import Home from './components/first/Home';
 
 Vue.config.productionTip = false;
 Vue.component('app-servers', Home);
+Vue.use(VueResource);
+
+Vue.http.options.root = 'https://vuejs-http-6d21e.firebaseio.com/';
+Vue.http.interceptors.push((request, next) => {
+  next((response) => {
+    response.json = () => response.body;
+  });
+});
+
 /* eslint-disable no-new */
 const eventBus = new Vue({
   methods: {
