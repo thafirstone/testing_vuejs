@@ -24,19 +24,21 @@ const eventBus = new Vue({
   },
 });
 
-Vue.directive('highlight', {
-  bind(el, binding, vnode) {
-    const s = JSON.stringify;
-    // el.innerHTML = `name: ${s(binding.name)}<br>` + `value: ${s(binding.value)}<br>` + `expression: ${s(binding.expression)}<br>` + `argument: ${s(binding.arg)}<br>` + `modifiers: ${s(binding.modifiers)}<br>` + `vnode keys: ${Object.keys(vnode).join(', ')}`;
-    el.innerHTML += ' toto';
-    if (binding.modifiers.delayed) {
-      console.log('pooppooop');
-    }
-    if (binding.arg === 'color') {
-      el.style.backgroundColor = binding.value;
-    }
-  },
-});
+// Vue.directive('highlight', {
+//   bind(el, binding, vnode) {
+//     const s = JSON.stringify;
+//     // el.innerHTML = `name: ${s(binding.name)}<br>` + `value: ${s(binding.value)}<br>` +
+// `expression: ${s(binding.expression)}<br>` + `argument: ${s(binding.arg)}<br>`
+//  + `modifiers: ${s(binding.modifiers)}<br>` + `vnode keys: ${Object.keys(vnode).join(', ')}`;
+//     el.innerHTML += ' toto';
+//     if (binding.modifiers.delayed) {
+//       console.log('pooppooop');
+//     }
+//     if (binding.arg === 'color') {
+//       el.style.backgroundColor = binding.value;
+//     }
+//   },
+// });
 
 export default eventBus;
 

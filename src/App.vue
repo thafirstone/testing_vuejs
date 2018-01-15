@@ -34,7 +34,8 @@
           </div>
         </div> -->
         <!-- <app-form></app-form> -->
-        <app-directives></app-directives>
+        <!-- <app-directives></app-directives> -->
+        <app-transition></app-transition>
     </div>
   </div>
 </template>
@@ -49,6 +50,7 @@
   import Header from './components/wonderful/Header';
   import DefaultForm from './components/form/DefaultForm';
   import Directives from './components/directives/BuiltInDirectives';
+  import Transition from './components/transition/Transition';
   import eventBus from './main';
 
   export default {
@@ -62,6 +64,7 @@
       appHeader: Header,
       appForm: DefaultForm,
       appDirectives: Directives,
+      appTransition: Transition,
     },
     data() {
       return {
