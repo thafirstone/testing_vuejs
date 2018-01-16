@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-    <h1>The User Component</h1>
+    <h1>The User Component for id: {{id}}</h1>
     <p>I'm an awesome User!</p>
     <button @click="changeName">Change My Name</button>
     <p>My name is {{ name }}</p>
@@ -22,6 +22,7 @@
           :updateFn="updateAge"></app-user-edit>
       </div>
     </div>
+    <button  class="btn btn-warning" @click="navigateToHome">Go Home</button>
   </div>
 </template>
 
@@ -35,8 +36,10 @@ export default {
     return {
       name: 'Max',
       age: 27,
+      // id: this.$route.params.id,
     };
   },
+  props: ['id'],
   methods: {
     changeName() {
       // this.name = 'Anna';
@@ -45,11 +48,20 @@ export default {
     updateAge() {
       this.age = 30;
     },
+    navigateToHome() {
+      this.$router.push({path: '/'});
+    }
+  },
+  watch: {
+    '$route'(to, from) {
+      this.id = to.params.id;
+    }
   },
   components: {
     appUserDetail: UserDetail,
     appUserEdit: UserEdit,
   },
+
   created() {
     eventBus.$on('update:userAge', (age) => {
       this.age = age;

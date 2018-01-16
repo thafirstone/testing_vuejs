@@ -45,10 +45,10 @@
         //   }, (err) => {
         //     console.log(err);
         //   });
-        this.resource.saveAlt({node: this.node}, this.user);
+        this.resource.saveAlt({ node: this.node }, this.user);
       },
       getData() {
-        console.log(this.user);
+        // console.log(this.user);
         // this.$http.get('fuckery.json')
         //   // .then((response) => {
         //   //   return response.json();
@@ -62,24 +62,24 @@
         //   this.users = response.json();
         //   console.log('final :', response);
         // });
-        this.resource.getData({node: this.node})
-        .then((response) => {
-          this.users = response.json();
-          console.log('final :', response);
-        });
+        this.resource.getData({ node: this.node })
+          .then((response) => {
+            this.users = response.json();
+            // console.log('final :', response);
+          });
       },
     },
     created() {
       // this.getData();
       const customActions = {
-      retrieve: {method: 'GET', url: 'fuckery.json'},
-      getData: {method: 'GET'},
-      save: {method: 'POST', url: 'fuckery.json'},
-      // saveAlt: {method: 'POST', url: 'alternative.json'},
-      saveAlt: {method: 'POST', url: '{node}.json'},
+        retrieve: { method: 'GET', url: 'fuckery.json' },
+        getData: { method: 'GET' },
+        save: { method: 'POST', url: 'fuckery.json' },
+        // saveAlt: {method: 'POST', url: 'alternative.json'},
+        saveAlt: { method: 'POST', url: '{node}.json' },
       };
 
-      this.resource = this.$resource('{node}.json', {}, customActions);
+      this.resource = this.$resource('{ node }.json', { }, customActions);
     },
     beforeMount() {
       this.getData();

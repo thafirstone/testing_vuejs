@@ -11,12 +11,12 @@ Vue.component('app-servers', Home);
 Vue.use(VueResource);
 
 Vue.http.options.root = 'https://vuejs-http-6d21e.firebaseio.com/';
+
 Vue.http.interceptors.push((request, next) => {
   next((response) => {
     response.json = () => response.body;
   });
 });
-
 /* eslint-disable no-new */
 const eventBus = new Vue({
   methods: {

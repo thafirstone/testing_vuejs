@@ -36,7 +36,15 @@
         <!-- <app-form></app-form> -->
         <!-- <app-directives></app-directives> -->
         <!-- <app-transition></app-transition> -->
-        <app-http></app-http>
+        <!-- <app-http></app-http> -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <h1>Routing</h1>
+          <hr>
+          <app-global-header></app-global-header>
+          <router-view></router-view>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -53,6 +61,8 @@
   import Directives from './components/directives/BuiltInDirectives';
   import Transition from './components/transition/Transition';
   import Http from './components/connect/Http';
+  import Home from './components/Home';
+  import GlobalHeader from './components/Header';
   import eventBus from './main';
 
   export default {
@@ -68,6 +78,8 @@
       appDirectives: Directives,
       appTransition: Transition,
       appHttp: Http,
+      appHome: Home,
+      appGlobalHeader: GlobalHeader,
     },
     data() {
       return {
