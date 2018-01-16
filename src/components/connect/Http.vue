@@ -79,7 +79,7 @@
         saveAlt: { method: 'POST', url: '{node}.json' },
       };
 
-      this.resource = this.$resource('{ node }.json', { }, customActions);
+      this.resource = this.$resource('{node}.json', { }, customActions);
     },
     beforeMount() {
       this.getData();

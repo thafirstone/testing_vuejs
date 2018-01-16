@@ -5,6 +5,7 @@ import VueResource from 'vue-resource';
 import App from './App';
 import router from './router';
 import Home from './components/first/Home';
+import store from './store/store';
 
 Vue.config.productionTip = false;
 Vue.component('app-servers', Home);
@@ -54,6 +55,7 @@ export default eventBus;
 
 new Vue({
   el: '#app',
+  store,
   router,
   ...App,
 });

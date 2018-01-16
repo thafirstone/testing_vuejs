@@ -49,13 +49,13 @@ export default {
       this.age = 30;
     },
     navigateToHome() {
-      this.$router.push({path: '/'});
-    }
+      this.$router.push({ path: '/' });
+    },
   },
   watch: {
-    '$route'(to, from) {
-      this.id = to.params.id;
-    }
+    $route(to, from) {
+      this.id = to.params.id || from.params.id;
+    },
   },
   components: {
     appUserDetail: UserDetail,

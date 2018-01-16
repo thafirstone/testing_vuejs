@@ -33,16 +33,15 @@
             </div>
           </div>
         </div> -->
-        <!-- <app-form></app-form> -->
         <!-- <app-directives></app-directives> -->
         <!-- <app-transition></app-transition> -->
-        <!-- <app-http></app-http> -->
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-          <h1>Routing</h1>
+          <!-- <h1>Routing</h1>
           <hr>
           <app-global-header></app-global-header>
-          <router-view></router-view>
+          <router-view></router-view> -->
+          <app-state-view></app-state-view>
         </div>
       </div>
     </div>
@@ -57,10 +56,9 @@
   import QuoteGrid from './components/wonderful/QuoteGrid';
   import NewQuote from './components/wonderful/NewQuote';
   import Header from './components/wonderful/Header';
-  import DefaultForm from './components/form/DefaultForm';
   import Directives from './components/directives/BuiltInDirectives';
   import Transition from './components/transition/Transition';
-  import Http from './components/connect/Http';
+  import StateView from './components/vuex/Index';
   import Home from './components/Home';
   import GlobalHeader from './components/Header';
   import eventBus from './main';
@@ -74,12 +72,11 @@
       appQuoteGrid: QuoteGrid,
       appNewQuote: NewQuote,
       appHeader: Header,
-      appForm: DefaultForm,
       appDirectives: Directives,
       appTransition: Transition,
-      appHttp: Http,
       appHome: Home,
       appGlobalHeader: GlobalHeader,
+      appStateView: StateView,
     },
     data() {
       return {
