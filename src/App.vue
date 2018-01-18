@@ -49,18 +49,18 @@
 </template>
 
 <script>
-  import User from './components/communication/User';
-  import Quote from './components/advanced/Quote';
-  import Author from './components/advanced/Author';
-  import New from './components/advanced/New';
-  import QuoteGrid from './components/wonderful/QuoteGrid';
-  import NewQuote from './components/wonderful/NewQuote';
-  import Header from './components/wonderful/Header';
-  import Directives from './components/directives/BuiltInDirectives';
-  import Transition from './components/transition/Transition';
-  import StateView from './components/vuex/Index';
-  import Home from './components/Home';
-  import GlobalHeader from './components/Header';
+  import User from '@/components/communication/User';
+  import Quote from '@/components/advanced/Quote';
+  import Author from '@/components/advanced/Author';
+  import New from '@/components/advanced/New';
+  import QuoteGrid from '@/components/wonderful/QuoteGrid';
+  import NewQuote from '@/components/wonderful/NewQuote';
+  import Header from '@/components/wonderful/Header';
+  import Directives from '@/components/directives/BuiltInDirectives';
+  import Transition from '@/components/transition/Transition';
+  import StateView from '@/components/vuex/Index';
+  import Home from '@/components/Home';
+  import GlobalHeader from '@/components/Header';
   import eventBus from './main';
 
   export default {

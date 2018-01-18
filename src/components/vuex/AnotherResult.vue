@@ -1,20 +1,21 @@
 <template>
   <div>
     <p>The Other Counter is : {{ doubleCounter }}</p>
-    <p>Number of Clicks : {{ stringCounter }}</p>
+      <p>Number of Clicks : {{ stringCounter }}</p>
     <p>Own Way : {{ myOwnWay }}</p>
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex';
+  import * as types from './../../store/types';
 
   export default {
     computed: {
-      ...mapGetters([
-        'doubleCounter',
-        'stringCounter',
-      ]),
+      ...mapGetters({
+        'doubleCounter' : types.DOUBLE_COUNTER,
+        'stringCounter': types.STRING_COUNTER,
+    }),
       myOwnWay() {
         return 'fucj the pllice';
       },
